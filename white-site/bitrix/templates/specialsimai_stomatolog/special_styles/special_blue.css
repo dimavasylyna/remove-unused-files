@@ -1,0 +1,101 @@
+.style a.color-blue.a-current {
+  border-color: #000;
+  background: #9FD7FF !important;
+}
+.style a.color-blue span {
+  background: #9FD7FF;
+  color: #000;
+}
+
+
+.color-blue body,
+.color-blue .aa-settings-popup {
+  color: #000;
+  background-color: #9FD7FF;
+}
+.color-blue .settings,
+.color-blue .settings a,
+.color-blue .settings .aa-block {
+  color: #000;
+  border-color: #000 !important;
+}
+.color-blue a {
+  color: #000;
+}
+.color-blue a.btn {
+ 
+}
+.color-blue a.btn-link {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.color-blue * {
+  color: #000;
+  border-color: #000;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.color-blue hr {
+  background: #000;
+  height: 2px;
+}
+
+.color-blue .table th {
+  color: #9FD7FF;
+  background: #000;
+}
+
+.color-blue h1,
+.color-blue .h1,
+.color-blue h2,
+.color-blue .h2,
+.color-blue h3,
+.color-blue .h3,
+.color-blue h4,
+.color-blue .h4 {
+  color: #000; 
+}
+
+
+.menu ul li a{
+	background:#9FD7FF !important;
+	color:#000 !important;
+}
+
+.menu li a:hover, .menu li:hover > a{
+		background:#000 !important;
+		color:#9FD7FF !important;
+	}
+	
+
+tr{border: 1px solid;}
+.color-blue th *,
+.color-blue th
+{color:#9FD7FF !important;background-color:#000;}
+textarea,input{background-color:#9FD7FF}
+
+@media (max-width: 760px) {
+  .menu li:not(:first-child) a {
+    border-top:1px solid #9FD7FF;
+  }
+  .menu li a{
+    background:#000;
+    color: #9FD7FF;
+  }
+  .sub-visible ~ .sub-menu{
+    margin-bottom: -4px;
+  }
+}
+
+.svg-path{
+  stroke: #9FD7FF;
+}
+.menu li a:hover, .menu li:hover > a .svg-path{
+  stroke: #9FD7FF;
+}
+
+@media (min-width: 761px){
+    .sub-menu{
+      border: 3px solid #000;
+    }
+}

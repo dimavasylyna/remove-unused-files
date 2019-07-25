@@ -1,0 +1,106 @@
+
+
+/* Start:/bitrix/templates/.default/components/ip/nx_gallery_3.6/stomatolog-liucenzii/style.css?15118688502150*/
+.nx-gallery-line { 
+	width: 100%;
+	width: calc(100% + 10px);
+	height: auto;
+	text-align: left; 
+	margin: 20px -5px 20px -5px;  
+	position: relative; 
+	vertical-align: top;
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+-webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    	flex-direction: row;
+-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    	flex-wrap: wrap;
+-webkit-justify-content: flex-start;
+    	  -ms-flex-pack: start;
+    	justify-content: flex-start;
+-webkit-align-content: flex-start;
+   -ms-flex-line-pack: start;
+    	align-content: flex-start;
+-webkit-align-items: flex-start;
+     -ms-flex-align: start;
+    	align-items: flex-start;
+}
+
+.nx-gallery-line a {
+	text-decoration: none; 
+	border: none;
+}
+
+.nx-gallery-line .nx-gallery-element  {
+	border: 0px solid #ccc; 
+	display: inline-block; 
+	margin: 0px;
+	padding: 5px; 
+	position: relative; 
+	vertical-align: top;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+.nx-gallery-line .nx-gallery-element ins {
+	display: block; 
+	text-decoration: none; 
+	font-size: 7.5pt;
+	color: inherit; 
+	height: auto; 
+	max-width: 100px;
+}
+
+.nx-gallery-line .nx-gallery-element s {
+	text-decoration: none;
+}
+
+.nx-gallery-line .nx-gallery-element  img {
+	border: 1px solid #ccc;
+}
+
+.nx-gallery-line .nx-gallery-element .slide-desk {
+	position: absolute; 
+	display: block; 
+	background: rgba(0, 0, 0, 0.6); 
+	padding: 5px; 
+	color: #fff; 
+	top: 0; 
+	left: 0; 
+	z-index: 20px; 
+	display: none; 
+	width: 80%; 
+} 
+
+.nx-gallery-line .nx-gallery-element:hover .slide-desk {
+	display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+	.nx-gallery-line .nx-gallery-element {
+		width: 25%;
+		max-width: 250px;
+	}
+	
+	.nx-gallery-line .nx-gallery-element img {width: 100%;}
+}
+
+@media only screen and (max-width: 640px) {
+	.nx-gallery-line .nx-gallery-element {
+		width: 33.33%;
+		max-width: 220px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.nx-gallery-line .nx-gallery-element {
+		width: 50%;
+		max-width: 250px;
+	}
+}
+/* End */
+/* /bitrix/templates/.default/components/ip/nx_gallery_3.6/stomatolog-liucenzii/style.css?15118688502150 */

@@ -1,0 +1,107 @@
+.style a.color-black.a-current {
+  border-color: #fff;
+  background: #000 !important;
+}
+.style a.color-black span {
+  background: #000;
+  color: #fff;
+}
+
+
+.color-black body,
+.color-black .aa-settings-popup {
+  color: #fff;
+  background-color: #000;
+}
+.color-black .settings,
+.color-black .settings a,
+.color-black .settings .aa-block {
+  color: #fff;
+  border-color: #fff !important;
+}
+.color-black a {
+  color: #fff;
+}
+.color-black a.btn {
+ 
+}
+.color-black a.btn-link {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.color-black hr {
+  background: #fff;
+  height: 2px;
+}
+
+.color-black .table th {
+  color: #000;
+  background: #fff;
+}
+
+.color-black h1,
+.color-black .h1,
+.color-black h2,
+.color-black .h2,
+.color-black h3,
+.color-black .h3,
+.color-black h4,
+.color-black .h4 {
+  color: #fff; 
+}
+
+.menu ul {
+	background: #000;
+    border: 4px solid #fff;
+}
+
+.sub-menu>li {
+    border-bottom: 1px solid #fff !important;
+}
+
+.menu ul li a{
+	background:#000 !important;
+	color:#fff !important;
+}
+
+.menu li a:hover, .menu li:hover > a{
+		background:#fff !important;
+		color:#000 !important;
+	}
+	
+
+tr{border: 1px solid;}
+.color-black th *,
+.color-black th{color:#000 !important;background-color:#fff;}
+textarea,input{background-color:#000}
+
+
+.color-black * {
+  color: #fff;
+  border-color: #fff;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 760px) {
+  .menu li a {
+    background:#fff;
+    color: #000;
+/*     border-top:1px solid #000;
+   */  }
+  .sub-visible ~ .sub-menu{
+    margin-bottom: -8px;
+  }
+}
+
+/* .svg-path{
+  stroke: #000;
+} */
+
+.svg-path{
+  stroke: #000;
+}
+.menu li a:hover, .menu li:hover > a .svg-path{
+  stroke: #000;
+}
