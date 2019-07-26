@@ -4,7 +4,8 @@
 // Файли, які необхідно просканувати на ресурси
 const htmlFilePathList = [
 	`index.html`,
-	`uslugi/1/index.html`	
+	`uslugi/index.html`,
+	`contacts/contacts/contacts/index.html`	
 ];
 // модуль для роботи з файловою системою
 const fs = require(`fs`);
@@ -29,11 +30,15 @@ let findAllDependence = (file) => {
 		$(selector).each(function(i, link){
 			// регулярка прибирає на початку "../", щоб перетворити
 			// абсолютний шлях у відносний
-			let filePath = path.resolve($(this).attr(attr).replace(/(^(\.\.\/)*|^\/)/, ``));
+			// let filePath = $(this).attr(attr);
+			let filePath = path.resolve(__dirname, file.replace(/((.*\/)|.*)(.*)$/, `$2`), $(this).attr(attr));
+			// console.log(filePath);
 			resultObj[filePath] = true; 
 		});
 		return resultObj;
 	}
+
+
 	// знаходимо шляхи всіх стилів
 	let objStyles = getLinks(`link[rel=stylesheet]`, `href`);
 	let objScripts = getLinks(`script[src]`, `src`);
@@ -71,16 +76,19 @@ function getAllFiles(dirPath){
 getAllFiles(`.`);
 
 
+
+
 // видаляємо файли, які не використовуються
 let removeUnusedFiles = () => {
 	allFilesPath.forEach((filePath)=>{
 		if (allUsedFilesPathObj[filePath]) {
 			// fs.unlinkSync(filePath)
-			console.log(`${filePath}\n`);
+			// console.log(`${filePath}\n`);
+			console.log(`${filePath} ------- USED`);
 		}
+		console.log(`${filePath} ------- ALL`);
 	})
 }
-
 removeUnusedFiles();
 // записуємо в файл
     // fs.writeFile("out.html", data,  function(err) {
