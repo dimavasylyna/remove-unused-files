@@ -28,13 +28,12 @@ let findAllDependence = (file) => {
 	let getLinks = (selector, attr) => {
 		let resultObj = {};
 		$(selector).each(function(i, link){
-			// регулярка прибирає на початку "../", щоб перетворити
-			// абсолютний шлях у відносний
-			// let filePath = $(this).attr(attr);
-			let filePath = path.resolve(__dirname, file.replace(/((.*\/)|.*)(.*)$/, `$2`), $(this).attr(attr));
-			// console.log(filePath);
+			// ${path.dirname(file)}/ - прибирає зі шляху назву файлу
+			// uslugi/index.html => uslugi/
+			let filePath = path.resolve(__dirname, `${path.dirname(file)}/`, $(this).attr(attr));
 			resultObj[filePath] = true; 
 		});
+		// повертає обєкт з абсолютними шляхами, типу {path: true}
 		return resultObj;
 	}
 
@@ -45,7 +44,6 @@ let findAllDependence = (file) => {
 	let objImg = getLinks(`img[src]`, `src`);
 	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg};
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}
-	// console.log(objUsedFilesPath);
 	return objUsedFilesPath;
 }
 
@@ -53,7 +51,6 @@ let findAllDependence = (file) => {
 
 // запихуємо результати для всіх файлів, які використовуються 
 htmlFilePathList.forEach((file)=>allUsedFilesPathObj = Object.assign(allUsedFilesPathObj, findAllDependence(file)));
-// console.log(allUsedFilesPathObj);
 
 
 
@@ -63,12 +60,12 @@ function getAllFiles(dirPath){
       let filePath = path.join(dirPath , file);
       let stat= fs.statSync(filePath);
       if (stat.isDirectory()) {            
-        getAllFiles(filePath);
+        getAllFiles(filePath);  
       } else {
              // записуємо в масив абсолютний шлях файлу
             allFilesPath.push(path.resolve(filePath)); 
-            count++;                    
-      }    
+                              
+      }   
   });  
 }
 // в параметр передаємо директорію, в якій шукати
@@ -85,9 +82,11 @@ let removeUnusedFiles = () => {
 			// fs.unlinkSync(filePath)
 			// console.log(`${filePath}\n`);
 			console.log(`${filePath} ------- USED`);
+			count++;
 		}
 		console.log(`${filePath} ------- ALL`);
 	})
+	console.log(count);
 }
 removeUnusedFiles();
 // записуємо в файл
