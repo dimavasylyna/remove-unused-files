@@ -38,11 +38,16 @@ let findAllDependence = (file) => {
 	}
 
 
-	// знаходимо шляхи всіх стилів
+	// знаходимо шляхи всіх ресурсів, які використовуються
 	let objStyles = getLinks(`link[rel=stylesheet]`, `href`);
 	let objScripts = getLinks(`script[src]`, `src`);
 	let objImg = getLinks(`img[src]`, `src`);
-	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg};
+	let favicons = getLinks(`link[rel*=icon]`, `href`);
+
+	// парсимо стилі
+
+
+	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons};
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}
 	return objUsedFilesPath;
 }
