@@ -27,34 +27,38 @@ let getLinks = (selector, attr, file) => {
 		// ${path.dirname(file)}/ - прибирає зі шляху назву файлу
 		// uslugi/index.html => uslugi/
 		let filePath = path.resolve(__dirname, `${path.dirname(file)}/`, $(this).attr(attr));
-		resultObj[filePath] = true;
+		// перевіряємо, чи існує файл за підключеним лінком
+		if (fs.existsSync(filePath)) {
+			resultObj[filePath] = true;
+		}
+
 	});
 	// повертає обєкт з абсолютними шляхами, типу {path: true}
+	// console.log(resultObj);
 	return resultObj;
 }
 
-//готуэ інлайнові стилі для витягнення фонових зображень
-// просто додає пробіл в кінці, щоб регулярка правильно спрацювала
-let prepareHTMLForSearchInlineBg = (file) => {
-	let $ = cheerio.load(fs.readFileSync(file), { decodeEntities: false });
+let parseCss = (filePath) => {
+	const bgUrlStyleRegex = /([:,\s]\s*url\s*\(\s*((?:'(\S*?)'|"(\S*?)"|((?:\\\s|\\\)|\\\"|\\\'|\S)*?))\s*)\))/gi;
+	// console.log(filePath + ` filePath ------------`);
+	let styleFile = fs.readFileSync(filePath, `utf8`);
+	let bgUrl = styleFile.match(bgUrlStyleRegex);
+	let bgUrlStyleObj = {};
 
-	$(`*`).each(function() {
-		// console.log(elem);
-		let currentStyles = $(this).attr(`style`);
-		if (currentStyles !== undefined) {
-			$(this).attr(`style`, `${currentStyles} `);
-			console.log($(this));
+// підчищаємо за регуляркою лапки
+	bgUrl.forEach((elem)=>{
+		elem = elem.replace(bgUrlStyleRegex, `$2`);
+		if (elem[elem.length - 1] === `'` || elem[elem.length - 1] === `"` ) {
+			elem = elem.substring(0, elem.length - 1);
 		}
-	});
-	// console.log($.html());
-	fs.writeFile(file, $.html(),  function(err) {
-		if(err) {
-			throw err;
+		if (elem[0] === `'` || elem[0] === `"`) {
+			elem = elem.substring(1);
 		}
-		console.log("The file was saved!");
-	});
-};
 
+		bgUrlStyleObj[elem] =  true;
+	});
+	// console.log(bgUrlStyleObj);
+}
 let findAllDependence = (file) => {
 	// знаходимо шляхи всіх ресурсів, які використовуються
 	let objStyles = getLinks(`link[rel=stylesheet]`, `href`, file);
@@ -62,7 +66,9 @@ let findAllDependence = (file) => {
 	let objImg = getLinks(`img[src]`, `src`, file);
 	let favicons = getLinks(`link[rel*=icon]`, `href`, file);
 
-	prepareHTMLForSearchInlineBg(file);
+	for (let styleFile in objStyles) {
+		parseCss(styleFile);
+	}
 
 	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons};
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}

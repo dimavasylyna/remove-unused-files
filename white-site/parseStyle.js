@@ -12,7 +12,7 @@ bgUrl.forEach((elem)=>{
     elem = elem.replace(bgUrlStyleRegex, `$2`);
     if (elem[elem.length - 1] === `'` || elem[elem.length - 1] === `"` ) {
         elem = elem.substring(0, elem.length - 1);
-    } ;
+    }
     if (elem[0] === `'` || elem[0] === `"`) {
         elem = elem.substring(1);
     }
