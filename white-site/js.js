@@ -17,35 +17,52 @@ let count = 0;
 let allUsedFilesPathObj = {};
 let allFilesPath = [];
 
-
-
-let findAllDependence = (file) => {
-	// підгружаємо файл, в якому будемо працювати 
+let getLinks = (selector, attr, file) => {
+	// підгружаємо файл, в якому будемо працювати
 	// (обовязково ставити { decodeEntities: false })
 	// інакше нелатинські символи будуть в hex unicode
 	let $ = cheerio.load(fs.readFileSync(file), { decodeEntities: false });
-	
-	let getLinks = (selector, attr) => {
-		let resultObj = {};
-		$(selector).each(function(i, link){
-			// ${path.dirname(file)}/ - прибирає зі шляху назву файлу
-			// uslugi/index.html => uslugi/
-			let filePath = path.resolve(__dirname, `${path.dirname(file)}/`, $(this).attr(attr));
-			resultObj[filePath] = true; 
-		});
-		// повертає обєкт з абсолютними шляхами, типу {path: true}
-		return resultObj;
-	}
+	let resultObj = {};
+	$(selector).each(function(i, link){
+		// ${path.dirname(file)}/ - прибирає зі шляху назву файлу
+		// uslugi/index.html => uslugi/
+		let filePath = path.resolve(__dirname, `${path.dirname(file)}/`, $(this).attr(attr));
+		resultObj[filePath] = true;
+	});
+	// повертає обєкт з абсолютними шляхами, типу {path: true}
+	return resultObj;
+}
 
+//готуэ інлайнові стилі для витягнення фонових зображень
+// просто додає пробіл в кінці, щоб регулярка правильно спрацювала
+let prepareHTMLForSearchInlineBg = (file) => {
+	let $ = cheerio.load(fs.readFileSync(file), { decodeEntities: false });
 
+	$(`*`).each(function() {
+		// console.log(elem);
+		let currentStyles = $(this).attr(`style`);
+		if (currentStyles !== undefined) {
+			$(this).attr(`style`, `${currentStyles} `);
+			console.log($(this));
+		}
+	});
+	// console.log($.html());
+	fs.writeFile(file, $.html(),  function(err) {
+		if(err) {
+			throw err;
+		}
+		console.log("The file was saved!");
+	});
+};
+
+let findAllDependence = (file) => {
 	// знаходимо шляхи всіх ресурсів, які використовуються
-	let objStyles = getLinks(`link[rel=stylesheet]`, `href`);
-	let objScripts = getLinks(`script[src]`, `src`);
-	let objImg = getLinks(`img[src]`, `src`);
-	let favicons = getLinks(`link[rel*=icon]`, `href`);
+	let objStyles = getLinks(`link[rel=stylesheet]`, `href`, file);
+	let objScripts = getLinks(`script[src]`, `src`, file);
+	let objImg = getLinks(`img[src]`, `src`, file);
+	let favicons = getLinks(`link[rel*=icon]`, `href`, file);
 
-	// парсимо стилі
-
+	prepareHTMLForSearchInlineBg(file);
 
 	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons};
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}
@@ -91,7 +108,7 @@ let removeUnusedFiles = () => {
 		}
 		console.log(`${filePath} ------- ALL`);
 	})
-	console.log(count);
+	console.log(count + ` used`);
 }
 removeUnusedFiles();
 // записуємо в файл
