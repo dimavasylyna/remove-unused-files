@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9a0a21d8-6b12-4b51-8f61-d98c20154d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/white-site/bitrix/cache/css/s1/stomatolog/kernel_main/kernel_main_v10d98.css" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/cache/css/s1/stomatolog/kernel_main/kernel_main_v10d98.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/white-site/button(2).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/white-site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/white-site/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/oms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/oms/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/uslugi/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/uslugi/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,26 +20,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/white-site/js.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="86" column="86" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/white-site/parseStyle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="21" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -63,8 +44,9 @@
       <find>button2.png</find>
       <find>F:\\Dima\\something_code\\Parser_test\\remove-unused-files\\white-site\\button2.png</find>
       <find>\index.html</find>
-      <find>USED</find>
       <find>index.html</find>
+      <find>evera</find>
+      <find>USED</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -170,23 +152,22 @@
       <workItem from="1564156102332" duration="259000" />
       <workItem from="1564384850047" duration="2472000" />
       <workItem from="1564412973881" duration="2931000" />
-      <workItem from="1564470991953" duration="4886000" />
+      <workItem from="1564470991953" duration="8255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14602000" />
+    <option name="totallyTimeSpent" value="17971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12102874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12102874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.72619045" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44217688" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42517006" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -220,15 +201,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/white-site/js.js</url>
-          <line>63</line>
+          <line>66</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/white-site/js.js</url>
-          <line>85</line>
+          <line>91</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/white-site/js.js</url>
+          <line>78</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -258,17 +245,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/white-site/js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="86" column="86" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/white-site/parseStyle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
         </state>
       </provider>
     </entry>
