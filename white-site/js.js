@@ -5,8 +5,9 @@
 const htmlFilePathList = [
 	`index.html`,
 	`uslugi/index.html`,
-	`contacts/contacts/contacts/index.html`	
+	`contacts/contacts/contacts/index.html`
 ];
+
 // модуль для роботи з файловою системою
 const fs = require(`fs`);
 // модуль для роботи зі шляхами
@@ -54,10 +55,11 @@ let parseCss = (filePath) => {
 		if (elem[0] === `'` || elem[0] === `"`) {
 			elem = elem.substring(1);
 		}
-
-		bgUrlStyleObj[elem] =  true;
+        let absPath = path.resolve(__dirname, `${path.dirname(filePath)}/`, elem);
+		bgUrlStyleObj[absPath] =  true;
 	});
 	// console.log(bgUrlStyleObj);
+	return bgUrlStyleObj;
 }
 let findAllDependence = (file) => {
 	// знаходимо шляхи всіх ресурсів, які використовуються
@@ -65,20 +67,25 @@ let findAllDependence = (file) => {
 	let objScripts = getLinks(`script[src]`, `src`, file);
 	let objImg = getLinks(`img[src]`, `src`, file);
 	let favicons = getLinks(`link[rel*=icon]`, `href`, file);
+	let objUsedFilesPathInStyles = {};
+    for (let styleFile in objStyles) {
+        objUsedFilesPathInStyles = Object.assign(objUsedFilesPathInStyles, parseCss(styleFile));
+    }
 
-	for (let styleFile in objStyles) {
-		parseCss(styleFile);
-	}
 
-	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons};
+	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons, ...objUsedFilesPathInStyles};
+
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}
 	return objUsedFilesPath;
 }
 
 
 
-// запихуємо результати для всіх файлів, які використовуються 
-htmlFilePathList.forEach((file)=>allUsedFilesPathObj = Object.assign(allUsedFilesPathObj, findAllDependence(file)));
+// для кожного файлу html викликаємо ф-цію findAllDependence(),
+// результат якої присвоюємо обєкту allUsedFilesPathObj
+htmlFilePathList.forEach((file)=>{
+    allUsedFilesPathObj = Object.assign(allUsedFilesPathObj, findAllDependence(file));
+});
 
 
 
@@ -99,7 +106,9 @@ function getAllFiles(dirPath){
 // в параметр передаємо директорію, в якій шукати
 // '.' - поточна директорія, де знаходиться файл запуску (даний файл)
 getAllFiles(`.`);
-
+// console.log(allFilesPath);
+// console.log(`ALL USED FILE HERE:`);
+// console.log(allUsedFilesPathObj);
 
 
 
