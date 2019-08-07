@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0a21d8-6b12-4b51-8f61-d98c20154d40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/white-site/contacts/forTestImportCss2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/white-site/main/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/white-site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/cache/css/s1/stomatolog/kernel_main/kernel_main_v10d98.css" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/cache/css/s1/stomatolog/kernel_main/kernel_main_v10d98.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/specialsimai_stomatolog/kernel_main/kernel_main_v1cc99.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/specialsimai_stomatolog/kernel_main/kernel_main_v1cc99.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/stomatolog/kernel_main/kernel_main_v1f758.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/stomatolog/kernel_main/kernel_main_v1f758.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/stomatolog/template_7aefe5be1bab0198fa0b79021054e410/template_7aefe5be1bab0198fa0b79021054e410_v16f86.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/cache/js/s1/stomatolog/template_7aefe5be1bab0198fa0b79021054e410/template_7aefe5be1bab0198fa0b79021054e410_v16f86.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/components/ip/nx_gallery_3.6/jquery.fancybox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/components/ip/nx_gallery_3.6/jquery.fancybox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/templates/stomatolog/hyphenate.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/templates/stomatolog/hyphenate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/bitrix/templates/stomatolog/modernizr.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/bitrix/templates/stomatolog/modernizr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/button2.png" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/img/button2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/contacts/contacts/contacts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/contacts/contacts/contacts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/header__bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/img/header__bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/white-site/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/white-site/oms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/oms/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/out.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/main/out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/parseStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/parseStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/parseTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/prod.png" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/img/prod.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/spetsialisty/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/spetsialisty/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/white-site/test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/white-site/uslugi/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/white-site/uslugi/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +40,56 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/white-site/js.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/white-site/parseStyle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-355">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/white-site/main/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/white-site/main/styleForTestImport.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/white-site/contacts/forTestImportCss2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="1" lean-forward="true" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>kernel_main_v10d98.css</find>
-      <find>favic</find>
-      <find>used</find>
       <find>prod</find>
       <find>kernel_main_v10d98</find>
       <find>remove-unused-files\bitrix</find>
@@ -47,6 +110,16 @@
       <find>index.html</find>
       <find>evera</find>
       <find>USED</find>
+      <find>header__bg</find>
+      <find>console.log</find>
+      <find>Impor</find>
+      <find>існу</find>
+      <find>Import</find>
+      <find>imageTestImportStyle.png</find>
+      <find>imageTestImportStyle</find>
+      <find>import</find>
+      <find>impor</find>
+      <find>style</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -55,16 +128,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/white-site/parseStyle.js" />
-        <option value="$PROJECT_DIR$/white-site/index.html" />
         <option value="$PROJECT_DIR$/white-site/debug.js" />
+        <option value="$PROJECT_DIR$/white-site/index.html" />
+        <option value="$PROJECT_DIR$/white-site/style.css" />
+        <option value="$PROJECT_DIR$/white-site/main/style.css" />
+        <option value="$PROJECT_DIR$/white-site/parseStyle.js" />
+        <option value="$PROJECT_DIR$/white-site/main/styleForTestImport.css" />
+        <option value="$PROJECT_DIR$/white-site/contacts/forTestImportCss2.css" />
         <option value="$PROJECT_DIR$/white-site/js.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1681" />
+    <option name="y" value="-182" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -86,6 +163,24 @@
               <item name="remove-unused-files" type="462c0819:PsiDirectoryNode" />
               <item name="white-site" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="remove-unused-files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remove-unused-files" type="462c0819:PsiDirectoryNode" />
+              <item name="white-site" type="462c0819:PsiDirectoryNode" />
+              <item name="contacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remove-unused-files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remove-unused-files" type="462c0819:PsiDirectoryNode" />
+              <item name="white-site" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="remove-unused-files" type="b2602c69:ProjectViewProjectNode" />
+              <item name="remove-unused-files" type="462c0819:PsiDirectoryNode" />
+              <item name="white-site" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -101,6 +196,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Dima\something_code\Parser_test\remove-unused-files\white-site\contacts" />
+      <recent name="F:\Dima\something_code\Parser_test\remove-unused-files\white-site\main" />
+      <recent name="F:\Dima\something_code\Parser_test\remove-unused-files\white-site\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,8 +232,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.js.js" />
-        <item itemvalue="Node.js.debug.js" />
         <item itemvalue="Node.js.parseStyle.js" />
+        <item itemvalue="Node.js.debug.js" />
         <item itemvalue="Node.js.test.js" />
       </list>
     </recent_temporary>
@@ -152,23 +254,25 @@
       <workItem from="1564156102332" duration="259000" />
       <workItem from="1564384850047" duration="2472000" />
       <workItem from="1564412973881" duration="2931000" />
-      <workItem from="1564470991953" duration="8255000" />
+      <workItem from="1564470991953" duration="8296000" />
+      <workItem from="1565187661672" duration="7208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17971000" />
+    <option name="totallyTimeSpent" value="25220000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-1928" y="-182" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12102874" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09115139" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44217688" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42517006" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42777777" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2777778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -190,72 +294,74 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/white-site/test.js</url>
-          <line>40</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/white-site/debug.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/white-site/js.js</url>
-          <line>66</line>
+          <line>64</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/white-site/js.js</url>
-          <line>91</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/white-site/js.js</url>
-          <line>78</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/white-site/test.js">
+    <entry file="file://$PROJECT_DIR$/white-site/main/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/white-site/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="119">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/parseTest.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/white-site/debug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="442">
           <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/main/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/white-site/parseStyle.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/contacts/forTestImportCss2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/white-site/main/styleForTestImport.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="21" selection-end-column="27" />
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/white-site/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        <state relative-caret-position="327">
+          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
         </state>
       </provider>
     </entry>

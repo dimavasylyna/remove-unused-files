@@ -1,0 +1,6 @@
+.panel {
+    background-image: url(../img/imageTestImportStyle.png);
+    height: 200px;
+    width: 200px;
+    background-color: #000;
+}

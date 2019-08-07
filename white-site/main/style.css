@@ -1,0 +1,4 @@
+@import 'styleForTestImport.css';
+.main-outer {
+     background-image: url(../img/image.jpg);
+}
