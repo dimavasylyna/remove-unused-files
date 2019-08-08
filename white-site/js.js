@@ -18,6 +18,8 @@ const cheerio = require(`cheerio`);
 let count = 0;
 let allUsedFilesPathObj = {};
 let allFilesPath = [];
+let importStyleUrlObj = Object.create(null);
+let bgUrlStyleObj = Object.create(null);
 
 let getLinks = (selector, attr, file) => {
 	// підгружаємо файл, в якому будемо працювати
@@ -36,37 +38,17 @@ let getLinks = (selector, attr, file) => {
 
 	});
 	// повертає обєкт з абсолютними шляхами, типу {path: true}
-	// console.log(resultObj);
 	return resultObj;
 }
 
 let parseCss = (filePath) => {
 	// якщо файл з вказаним шляхом існує
 	if (fs.existsSync(filePath)) {
+		console.log(`exist`)
 		const bgUrlStyleRegex = /([:,\s]\s*url\s*\(\s*((?:'(\S*?)'|"(\S*?)"|((?:\\\s|\\\)|\\\"|\\\'|\S)*?))\s*)\))/gi;
-		// console.log(filePath + ` filePath ------------`);
 		let styleFile = fs.readFileSync(filePath, `utf8`);
 		let bgUrl = styleFile.match(bgUrlStyleRegex);
-		let bgUrlStyleObj = Object.create(null);
 
-
-		// ------- пошук підключених стилів
-		let importStylesRegex = /@import[ ]*['\"]{0,}(url\()*['\"]*([^;'\"\)]*)['\"\)]*/gi;
-		let importStylesUrl = styleFile.match(importStylesRegex);
-		let importStyleUrlObj = Object.create(null);
-
-		if (importStylesUrl) {
-			importStylesUrl = importStylesUrl.forEach((importUrl)=>{
-				let url = importUrl.replace(importStylesRegex, `$2`);
-				let absPath = path.resolve(__dirname, `${path.dirname(`main/style.css`)}/`, url);
-				importStyleUrlObj[absPath] = true;
-				// якщо є стилі підключені через import, запускаємо для них ф-цію
-				// працює рекурсивно
-				parseCss(absPath);
-			});
-
-
-		}
 
 
 	// підчищаємо за регуляркою лапки
@@ -85,6 +67,22 @@ let parseCss = (filePath) => {
 			});
 		}
 
+		// ------- пошук підключених стилів
+		let importStylesRegex = /@import[ ]*['\"]{0,}(url\()*['\"]*([^;'\"\)]*)['\"\)]*/gi;
+		let importStylesUrl = styleFile.match(importStylesRegex);
+
+
+		if (importStylesUrl) {
+			importStylesUrl = importStylesUrl.forEach((importUrl)=>{
+				let url = importUrl.replace(importStylesRegex, `$2`);
+				let absPath = path.resolve(__dirname, `${path.dirname(filePath)}/`, url);
+				importStyleUrlObj[absPath] = true;
+				// якщо є стилі підключені через import, запускаємо для них ф-цію
+				// працює рекурсивно
+				parseCss(absPath);
+			});
+		}
+
 		return bgUrlStyleObj;
 	}
 }
@@ -99,14 +97,12 @@ let findAllDependence = (file) => {
     for (let styleFile in objStyles) {
         objUsedFilesPathInStyles = Object.assign(objUsedFilesPathInStyles, parseCss(styleFile));
     }
-	for (let key in objUsedFilesPathInStyles) {
-		console.log(key);
-	}
+
     // парсимо html
 	objUsedInlineStyles = parseCss(file);
 	console.log(objUsedInlineStyles);
 
-	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons, ...objUsedFilesPathInStyles, ...objUsedInlineStyles};
+	let objUsedFilesPath = {...objStyles, ...objScripts, ...objImg, ...favicons, ...objUsedFilesPathInStyles, ...objUsedInlineStyles, ...importStyleUrlObj};
 
 	// повертаємо обєкт з абсолютними шляхами, типу {path: true}
 	return objUsedFilesPath;
@@ -139,9 +135,7 @@ function getAllFiles(dirPath){
 // в параметр передаємо директорію, в якій шукати
 // '.' - поточна директорія, де знаходиться файл запуску (даний файл)
 getAllFiles(`.`);
-// console.log(allFilesPath);
-// console.log(`ALL USED FILE HERE:`);
-// console.log(allUsedFilesPathObj);
+
 
 
 
@@ -150,7 +144,6 @@ let removeUnusedFiles = () => {
 	allFilesPath.forEach((filePath)=>{
 		if (allUsedFilesPathObj[filePath]) {
 			// fs.unlinkSync(filePath)
-			// console.log(`${filePath}\n`);
 			console.log(`${filePath} ------- USED`);
 			count++;
 		}
@@ -158,7 +151,7 @@ let removeUnusedFiles = () => {
 	})
 	console.log(count + ` used`);
 }
-// removeUnusedFiles();
+removeUnusedFiles();
 
 
 

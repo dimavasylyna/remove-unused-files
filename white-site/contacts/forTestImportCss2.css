@@ -1,3 +1,4 @@
+@import 'forTestImportCss3.css';
 .panel {
     background-image: url(../img/imageTestImportStyle.png);
     height: 200px;
